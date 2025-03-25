@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Young+Serif&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Young+Serif&family=Outfit:wght@400;600;700&display=swap");
 
 :root {
   --bg-color: hsl(31, 53%, 90%);
@@ -61,8 +60,8 @@ span {
   font-weight: bold;
 }
 
-img {
-  max-width: 100%;
+.banner img {
+  width: 100%;
   height: auto;
   border-radius: 0.5rem;
 }
@@ -104,7 +103,6 @@ hr {
 .ingredients {
   color: var(--stone-600);
   margin: 1rem 0;
-  width: 100%;
 }
 
 .ingredients ul {
@@ -157,6 +155,7 @@ hr {
 .nutrition-content {
   display: flex;
   flex-direction: column;
+  gap: 1rem;
   width: 100%;
 }
 .nutrition-row {
@@ -164,10 +163,10 @@ hr {
   justify-content: space-between;
   border-bottom: 1px solid var(--stone-100);
   width: 100%;
+  padding: 0 5rem;
 }
 .nutrition-row p {
-  padding-left: 4rem;
-  padding-right: 6rem;
+  flex: 1;
 }
 
 .nutrition-row:last-child {
@@ -178,14 +177,49 @@ footer {
   text-align: center;
 }
 
-@media (max-width: 375px) {
+@media (max-width: 768px) {
   body {
-    --font-size: 1.5rem;
-    width: 100%;
+    --font-size: 1.4rem;
   }
   main.container {
     max-width: 100%;
     margin: 0;
+    padding: 1rem;
+    border-radius: 0;
+  }
+
+  .banner {
+    margin: -1rem -1rem -1rem -1rem;
+    width: calc(100% + 2rem);
+  }
+  .banner img {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+    object-fit: cover;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1,
+  h2,
+  p,
+  .preparation-time,
+  .ingredients,
+  .instructions,
+  .nutrition {
+    padding: 0 1rem;
+  }
+  .preparation-time ul,
+  .ingredients ul,
+  .instructions ol {
+    padding-left: 1rem;
+  }
+
+  .nutrition-row {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }
 
